@@ -38,14 +38,6 @@ class Company {
     addEmployee(employee) {
         this.employees.push(employee);
     };
-    addManager(manager) {
-        this.managers.push(manager);
-    };
-    listManagers() {
-        this.managers.forEach(manager => {
-            console.log(manager.describe());
-        });
-    };
     listEmployees() {
         this.employees.forEach(emp => {
             console.log(emp.describe());
