@@ -10,6 +10,7 @@ class Employee {
     return `${this.name} works in ${this.department}`;
   };
 };
+
 //step 3: Create subclass and extend to Employee (use super to call parent constructor)
 class Manager extends Employee {
   constructor(name, department, teamSize) {
@@ -21,14 +22,12 @@ class Manager extends Employee {
     return `${this.name} manages a team of ${this.teamSize} in ${this.department}`;
   };
 };
+
 //Step 4: sample employees and managers (use New employee() and New manager())
 const mgr = new Manager("Sonia Patel", "Marketing", 8);
 const emp = new Employee("matthew Smith", "Marketing");
 const emp2 = new Employee("Hillary Davis", "IT");
 
-console.log(mgr.describe());
-console.log(emp.describe());
-console.log(emp2.describe());
 //Step 5: creat a company class that holds employees and managers in an array
 class Company {
     constructor() {
@@ -38,7 +37,13 @@ class Company {
     addEmployee(employee) {
         this.employees.push(employee);
     };
+    listEmployees() {
+        this.employees.forEach(emp => {
+            console.log(emp.describe());
+        });
+    };
 };
+
 //Step 6: Instantiate company class and add employees and managers to it
 const myCompany = new Company();
 
