@@ -38,11 +38,6 @@ class Company {
     addEmployee(employee) {
         this.employees.push(employee);
     };
-    listEmployees() {
-        this.employees.forEach(emp => {
-            console.log(emp.describe());
-        });
-    };
 };
 //Step 6: Instantiate company class and add employees and managers to it
 const myCompany = new Company();
