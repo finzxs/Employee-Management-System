@@ -45,7 +45,12 @@ class Company {
     };
 };
 //Step 6: Instantiate company class and add employees and managers to it
+const myCompany = new Company();
 
+myCompany.addEmployee(mgr);
+myCompany.addEmployee(emp);
+myCompany.addEmployee(emp2);
+myCompany.listEmployees();
 
 
 
